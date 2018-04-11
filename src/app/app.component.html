@@ -24,4 +24,11 @@
   <button (click)="movePics('next')">Next</button>
 </div>
 
+<div class="sliderMinimap">
+  <ul>
+    <li *ngFor='let item of items'>
+      <img src={{item}} alt='mini photo' />
+    </li>
+  </ul>
+</div>
 

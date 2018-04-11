@@ -32,3 +32,25 @@
     margin: 0px 28px;
     cursor: pointer;
 }
+
+.sliderMinimap{
+    width: auto;
+    position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 240px);
+}
+
+.sliderMinimap ul{
+    display: flex;
+}
+
+.sliderMinimap li{
+    list-style-type: none;
+    width: 80px;
+    height: auto;
+}
+
+.sliderMinimap img{
+    width: 80px;
+    height: auto;
+}
