@@ -15,5 +15,16 @@ export class AppComponent {
     'https://wallpaperbrowse.com/media/images/3848765-wallpaper-images-download.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR--wdwKyp4bQqRKv1DoImPR_Uaowg3aiYSd1K0luWcfIMg5xOegg'
   ];
-  
+
+  sliderLeftPos = 0;
+  movePics(buttonClicked){
+    if (buttonClicked === 'back' && this.sliderLeftPos < 0){
+      this.sliderLeftPos += 400;
+    }else if (buttonClicked === 'next' && this.sliderLeftPos > (-400*(this.items.length-1))){
+      this.sliderLeftPos -= 400;
+    }
+  }
+  getStyle(){
+    return this.sliderLeftPos + 'px';
+  }
 }

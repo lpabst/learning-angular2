@@ -1,19 +1,21 @@
-<input value='' placeholder="name" />
+
+<p>Type your name</p>
+<input [(ngModel)]="name" #ctrl="ngModel" placeholder="Your name" />
 
 <h1>
   {{title}}
   {{name}}
 </h1>
 
-<div>
-  <app-image></app-image>
-  <app-image></app-image>
-</div>
-
 <div class="sliderWindow">
-  <ul class='sliderList' >
+  <ul class='sliderList' [style.left] = "getStyle()">
     <li *ngFor='let item of items' style="display: inline-block; list-style-type: none; vertical-align: top;">
       <app-image [imageUrl]="item"></app-image>
     </li>
   </ul>
+
+  <button (click)="movePics('back')">Back</button>
+  <button (click)="movePics('next')">Next</button>
 </div>
+
+

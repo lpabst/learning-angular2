@@ -1,7 +1,7 @@
 
 .sliderWindow{
     width: 400px;
-    height: 400px;
+    height: 440px;
     position: fixed;
     top: calc(50% - 200px);
     left: calc(50% - 200px);
@@ -11,9 +11,17 @@
 .sliderList{
     width: auto;
     height: 400px;
-    position: absolute;
+    position: relative;
     top: 0px;
-    /* left: -400px; */
+    transition: all 0.5s;
     display: flex;
     padding: 0px;
+    margin: 0px;
+}
+
+.sliderWindow button{
+    width: 140px;
+    height: 25px;
+    margin: 0px 28px;
+    cursor: pointer;
 }
