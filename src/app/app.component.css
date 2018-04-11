@@ -1,0 +1,19 @@
+
+.sliderWindow{
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    overflow: hidden;
+}
+
+.sliderList{
+    width: auto;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+    /* left: -400px; */
+    display: flex;
+    padding: 0px;
+}

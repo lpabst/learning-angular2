@@ -1,5 +1,19 @@
+<input value='' placeholder="name" />
+
 <h1>
-  <input value='' placeholder="name" />
   {{title}}
   {{name}}
 </h1>
+
+<div>
+  <app-image></app-image>
+  <app-image></app-image>
+</div>
+
+<div class="sliderWindow">
+  <ul class='sliderList' >
+    <li *ngFor='let item of items' style="display: inline-block; list-style-type: none; vertical-align: top;">
+      <app-image [imageUrl]="item"></app-image>
+    </li>
+  </ul>
+</div>
