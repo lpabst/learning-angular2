@@ -27,4 +27,10 @@ export class AppComponent {
   getStyle(){
     return this.sliderLeftPos + 'px';
   }
+
+  newImageUrl = '';
+  addImage(){
+    this.items.push(this.newImageUrl);
+    this.newImageUrl = '';
+  }
 }

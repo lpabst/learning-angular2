@@ -1,4 +1,11 @@
 
+.addImageInput{
+    width: 200px;
+    height: 20px;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
 .sliderWindow{
     width: 400px;
     height: 440px;

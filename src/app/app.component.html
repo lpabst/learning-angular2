@@ -7,6 +7,12 @@
   {{name}}
 </h1>
 
+<div>
+  <p>Add your own images here!</p>
+  <input placeholder="paste the image url here" [(ngModel)]="newImageUrl" #ctrl="ngModel" class="addImageInput" />
+  <button (click)="addImage()">Add Image</button>
+</div>
+
 <div class="sliderWindow">
   <ul class='sliderList' [style.left] = "getStyle()">
     <li *ngFor='let item of items' style="display: inline-block; list-style-type: none; vertical-align: top;">
