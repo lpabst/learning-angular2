@@ -1,34 +1,16 @@
 
-<p>Type your name</p>
-<input [(ngModel)]="name" #ctrl="ngModel" placeholder="Your name" />
-
-<h1>
-  {{title}}
-  {{name}}
-</h1>
-
 <div>
-  <p>Add your own images here!</p>
-  <input placeholder="paste the image url here" [(ngModel)]="newImageUrl" #ctrl="ngModel" class="addImageInput" />
-  <button (click)="addImage()">Add Image</button>
+
+  <div class="header">
+    <ul class="nav">
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </div>
+  <router-outlet>
+    <!--  router content goes here -->
+  </router-outlet>
 </div>
 
-<div class="sliderWindow">
-  <ul class='sliderList' [style.left] = "getStyle()">
-    <li *ngFor='let item of items' style="display: inline-block; list-style-type: none; vertical-align: top;">
-      <app-image [imageUrl]="item"></app-image>
-    </li>
-  </ul>
-
-  <button (click)="movePics('back')">Back</button>
-  <button (click)="movePics('next')">Next</button>
-</div>
-
-<div class="sliderMinimap">
-  <ul>
-    <li *ngFor='let item of items'>
-      <img src={{item}} alt='mini photo' />
-    </li>
-  </ul>
-</div>
 
